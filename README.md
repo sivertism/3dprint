@@ -11,7 +11,13 @@ In Cura, go to Preferences->Printers->Machine Settings, then replace
 "Start G-Code" with
 
 ```gcode
-START_PRINT BED_TEMP={material_bed_temperature_layer_0} EXTRUDER_TEMP={material_print_temperature_layer_0}<Paste>
+START_PRINT BED_TEMP={material_bed_temperature_layer_0} EXTRUDER_TEMP={material_print_temperature_layer_0}
+```
+
+Also replace "End G-Code" with
+
+```gcode
+END_PRINT
 ```
 
 ## No prints in a while?
