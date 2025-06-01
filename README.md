@@ -22,8 +22,32 @@ END_PRINT
 
 ## No prints in a while?
 
-Run `SCREWS_TILT_CALCULATE` to level the bed. This will tell you how much to turn each bed screw to get the printer level. Do `PROBE_CALIBRATE` afterwards.
+### Mechanical
 
-Run `PROBE_CALIBRATE` to calibrate the z-distance between probe and nozzle. This needs to be done every time you swap hotend.
+- Check for loose screws.
+- Check play in print head (V-slot wheels). Tighten eccentric nuts if necessary. Move head through full range to check that it's smooth.
+- Check play in belts, tighten if necessary.
+- Clean extruder gears.
+- Blow off dust with canned air.
+- Clean with isopropyl alcohol.
+- After print, feel temperature at bowden tube connection. Should not be too hot to touch (if so, fan needs cleaning or replacing).
 
-Run `BED_MESH_CALIBRATE` and then `SAVE_CONFIG` to rerun bed mesh calibration. This needs to be done every now and then.
+### Calibration
+
+Run `SCREWS_TILT_CALCULATE` to level the bed. This will tell you how much to turn each bed screw to get the printer level. Numbers are given in hours and minutes (60 minutes is one full rotation). Do `PROBE_CALIBRATE` afterwards.
+
+
+Run `PROBE_CALIBRATE` to calibrate the z-distance between probe and nozzle. Use a piece of paper to gauge the distance between nozzle and bed. This needs to be done every time you swap hotend. Don't forget `SAVE_CONFIG` afterwards.
+
+Go to 'HEIGHTMAP' and click 'Calibrate', or run `BED_MESH_CALIBRATE` from console and then `SAVE_CONFIG` to rerun bed mesh calibration. This needs to be done every now and then.
+
+## Yearly
+
+  - Check end of bowden tube. Cut if burnt
+  - Replace nozzle
+  - Check V-slot wheels for wear, especially flatspots
+  - Tighten all belts
+
+# Resources
+
+  - [BLTouch Complete setup, by PrintsLeo3D](https://youtu.be/5vmjBXvY6BA?si=0OyLlEUCHdVYDECg)
