@@ -22,4 +22,8 @@ END_PRINT
 
 ## No prints in a while?
 
-Run `BED_MESH_CALIBRATE` and then `SAVE_CONFIG` to rerun bed mesh calibration.
+Run `SCREWS_TILT_CALCULATE` to level the bed. This will tell you how much to turn each bed screw to get the printer level. Do `PROBE_CALIBRATE` afterwards.
+
+Run `PROBE_CALIBRATE` to calibrate the z-distance between probe and nozzle. This needs to be done every time you swap hotend.
+
+Run `BED_MESH_CALIBRATE` and then `SAVE_CONFIG` to rerun bed mesh calibration. This needs to be done every now and then.
